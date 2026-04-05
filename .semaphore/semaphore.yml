@@ -1,0 +1,24 @@
+version: v1.0
+name: Skylark Pipeline
+agent:
+  machine:
+    type: e1-standard-4
+    os_image: ubuntu2404
+fail_fast:
+  stop:
+    when: branch != 'main'
+auto_cancel:
+  running:
+    when: branch != 'main'
+  queued:
+    when: branch = 'main'
+blocks:
+  - name: OpenBLAS Build Test
+    dependencies: []
+    task:
+      jobs:
+        - name: Build
+          commands:
+            - checkout
+            - 'cd openblas '
+            - bash build.sh
