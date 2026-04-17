@@ -29,7 +29,7 @@ blocks:
         - name: Build
           commands:
             - checkout
-            - sudo apt-get install gfortran
+            - sudo apt-get install gfortran -y
             - cd openmpi5-64
             - bash build.sh
   - name: AMD BLIS Build Test
