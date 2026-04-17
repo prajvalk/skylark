@@ -20,13 +20,17 @@ cd ${DIR}
 
 # Build (use all available cores)
 echo "Building OpenBLAS..."
-make -j$(nproc)
+make -j$(nproc) INTERFACE64=1 BINARY=64
 
 # Optional: run tests
 # make test
 
 # Install (default: /opt/OpenBLAS or /usr/local if not overridden)
 echo "Installing OpenBLAS..."
-sudo make install
+sudo make PREFIX=/opt/openblas-64 install INTERFACE64=1 BINARY=64
+
+cd ..
+
+rm -rf ${DIR}
 
 echo "Done!"
