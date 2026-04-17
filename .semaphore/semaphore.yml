@@ -13,12 +13,30 @@ auto_cancel:
   queued:
     when: branch = 'main'
 blocks:
-  - name: OpenBLAS Build Test
+  - name: OpenBLAS 64 Build Test
     dependencies: []
     task:
       jobs:
         - name: Build
           commands:
             - checkout
-            - 'cd openblas '
+            - cd openblas-64
+            - bash build.sh
+  - name: OpenMPI 5 Build Test
+    dependencies: []
+    task:
+      jobs:
+        - name: Build
+          commands:
+            - checkout
+            - cd openmpi5-64
+            - bash build.sh
+  - name: AMD BLIS Build Test
+    dependencies: []
+    task:
+      jobs:
+        - name: Build
+          commands:
+            - checkout
+            - cd blis-64
             - bash build.sh
