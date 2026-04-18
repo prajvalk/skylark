@@ -27,7 +27,7 @@ make -j$(nproc) INTERFACE64=1 BINARY=64
 
 # Install (default: /opt/OpenBLAS or /usr/local if not overridden)
 echo "Installing OpenBLAS..."
-sudo make PREFIX=/opt/openblas-64 install INTERFACE64=1 BINARY=64
+sudo make PREFIX=/opt/skylark install INTERFACE64=1 BINARY=64
 
 cd ..
 

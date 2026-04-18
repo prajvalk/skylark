@@ -12,7 +12,7 @@ tar -xf openmpi-5.0.10.tar.bz2
 cd openmpi-5.0.10
 mkdir build
 cd build
-../configure  CXX=g++ CC=gcc FC=gfortran FCFLAGS="-m64 -fdefault-integer-8" CFLAGS=-m64 CXXFLAGS=-m64 --enable-mpi-fortran=usempi --prefix=/opt/openmpi5-64
+../configure FCFLAGS="-m64 -fdefault-integer-8" CFLAGS=-m64 CXXFLAGS=-m64 --enable-mpi-fortran=usempi --prefix=/opt/skylark
 make -j
 make -j check
 

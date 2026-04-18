@@ -64,8 +64,8 @@ export CMAKE_PREFIX_PATH="$SKYROOT:$CMAKE_PREFIX_PATH"
 
 ############################
 
-export PYTHONHOME="$SKYROOT/python" 2>/dev/null || true
-export PYTHONPATH="$SKYROOT/python/lib/python3.*/site-packages:$PYTHONPATH" 2>/dev/null || true
+#export PYTHONHOME="$SKYROOT/python" 2>/dev/null || true
+#export PYTHONPATH="$SKYROOT/python/lib/python3.*/site-packages:$PYTHONPATH" 2>/dev/null || true
 
 ############################
 
