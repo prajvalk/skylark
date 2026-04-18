@@ -32,5 +32,6 @@ sudo make PREFIX=/opt/skylark install INTERFACE64=1 BINARY=64
 cd ..
 
 rm -rf ${DIR}
+rm ${ARCHIVE}
 
 echo "Done!"
